@@ -135,7 +135,7 @@ generate-check: generate ## Check go code generation is on par
 		exit 1; \
 	fi
 
-test: mode-check vet ## Run unit tests
+test: vet ## Run unit tests
 	@go test $(TEST) $(TESTARGS) -timeout=3m
 
 # acctest runs provisioners acceptance tests
